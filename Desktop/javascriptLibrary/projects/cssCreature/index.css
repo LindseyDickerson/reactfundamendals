@@ -1,0 +1,188 @@
+body{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/01/58/10560539654f18c.jpg);
+     width: 100vw;
+     height: 100vh;
+     background-size: cover;
+     margin: 0;
+     pading: 0;
+     background-attachment: fixed;
+   }
+   
+   
+   .wrapper {
+     margin-left: 340px;
+     margin-top: 300px;
+   }
+   
+   .catBody {
+     width: 150px;
+     height: 150px;
+     border: solid 2px darkgray;
+     background-color: lightgray;
+     border-radius: 75px;
+     z-index: 0;
+     position: relative;
+   }
+   
+   
+   
+   .leftFoot {
+     width: 26px;
+     height: 50px;
+     border: solid 2px darkgray;
+     border-radius: 25px;
+     z-index: 1;
+     position: relative;
+     left: 26px;
+     top: 115px;
+     background-color: lightgray;
+   }
+   
+   .rightFoot {
+     width: 26px;
+     height: 50px;
+     border: solid 2px darkgray;
+     border-radius: 25px;
+     z-index: 1;
+     position: relative;
+     left: 85px;
+     top: 60px;
+     background-color: lightgray;
+   }
+   
+   
+   .head {
+     width: 90px;
+     height: 90px;
+     border: solid 2px darkgray;
+     background-color: lightgray;
+     border-radius: 50px;
+     z-index: 1;
+     top: -50px;
+     left: 24px;
+     position: absolute;
+   }
+   
+   .leftEar {
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-bottom: 20px solid darkgray;
+     transform: rotate(-23deg);
+     top: -10px;
+     left: 4px;
+     position: relative;
+   }
+   
+   .rightEar {
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-bottom: 20px solid darkgray;
+     transform: rotate(23deg);
+     top: -30px;
+     left: 50px;
+     position: relative;
+   }
+   
+   .leftEye {
+     width: 5px;
+     height: 5px;
+     border: solid 3px green;
+     border-radius: 5px;
+     background-color: green;
+     position: relative;
+     top: -15px;
+     left: 20px;
+   }
+   
+   .rightEye {
+     width: 5px;
+     height: 5px;
+     border: solid 3px green;
+     border-radius: 5px;
+     background-color: green;
+     position: relative;
+     top: -24px;
+     left: 55px;
+   }
+   
+   #nose {
+     width: 0;
+     height: 0;
+     border-left: 15px solid transparent;
+     border-right: 15px solid transparent;
+     border-top: 15px solid pink;
+     position: relative;
+     top: -18px;
+     left: 26px;
+   }
+   
+   .smileLeft {
+     height: 10px;
+     width: 30px;
+     border-radius: 0 0 10px 10px;
+     background-color: black;
+     border: 2px solid black;
+     position: relative;
+     top: -14px;
+     left: 26px;
+   }
+   
+   #lw1 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -50px;
+     left: -16px;
+     transform: rotate(15deg);
+   }
+   
+   #lw2 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -47px;
+     left: -16px;
+   }
+   
+   #lw3 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -44px;
+     left: -16px;
+     transform: rotate(-15deg);
+   }
+   
+   #rw1 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -60px;
+     left: 66px;
+     transform: rotate(-15deg);
+   }
+   #rw2 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -57px;
+     left: 66px;
+   }
+   #rw3 {
+     height: 3px;
+     width: 35px;
+     background-color: black;
+     position: relative;
+     top: -54px;
+     left: 66px;
+     transform: rotate(15deg);
+   }

@@ -1,0 +1,47 @@
+h1{
+    color: lightgreen;
+    text-align: center;
+    
+}
+
+h3{
+    color: blue;
+}
+
+p{
+    color: red;
+}
+
+#truthLie{
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 25px;
+    background-color: gray;
+
+}
+
+.option {
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color: lightgrey;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+
+}
+
+table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#title{
+    font-style: italic;
+}
+table, th, td{
+    border: 1px solid black;
+    background-color: lightblue;
+}
