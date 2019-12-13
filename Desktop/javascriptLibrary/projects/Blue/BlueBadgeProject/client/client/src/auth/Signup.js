@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Container, Row, Col } from 'reactstrap';
+import './signup.css';
+import APIURL from '../helpers/environment';
 
 const Signup = (props) => {
     const [email, setEmail] = useState('');
@@ -9,7 +11,7 @@ const Signup = (props) => {
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        fetch("http://localhost:3001/api/user/createuser", {
+        fetch(`${APIURL}/api/user/createuser`, {
             method: 'POST',
             body: JSON.stringify({user: {email: email, name: name, passwordhash: passwordHash}}),
             headers: new Headers({
@@ -25,24 +27,36 @@ const Signup = (props) => {
     }
 
     return(
-        <div>
-            <h1>Signup</h1>
+        <Container className="signupContainer">
+            <Row>
+            <Col md="6" id="inputs">
+            <h1 id="signup">Signup</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="email">Email</Label>
-                    <Input onChange={(e) => setEmail(e.target.value)} name="email" value={email} required />
+                    <div id="labelEmail">
+                    <Label htmlFor="email" id="emailLabel">Email</Label>
+                    </div>
+                    <Input id="inputEntry" onChange={(e) => setEmail(e.target.value)} name="email" value={email} required />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="name">Name</Label>
-                    <Input onChange={(e) => setName(e.target.value)} name="name" value={name} required />
+                    <div id="labelName">
+                    <Label htmlFor="name" id="nameLabel">Name</Label>
+                    </div>
+                    <Input id="inputEntry" onChange={(e) => setName(e.target.value)} name="name" value={name} required />
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="passwordHash">Password</Label>
-                    <Input onChange={(e) => setPasswordHash(e.target.value)} name="passwordHash" type="password" value={passwordHash} required/>
+                    <div id="labelPassword">
+                    <Label htmlFor="passwordHash" id="passwordLabel" >Password</Label>
+                    </div>
+                    <Input id="inputEntry" onChange={(e) => setPasswordHash(e.target.value)} name="passwordHash" type="password" value={passwordHash} minLength="5" required/>
                 </FormGroup>
-                <Button type="submit">Signup</Button>
+                <div id="buttonDiv">
+                   <Button id="signupButton" type="submit">Signup</Button>
+                </div>
             </Form>
-        </div>
+            </Col>
+            </Row>
+            </Container>
     )
 }
 export default Signup;

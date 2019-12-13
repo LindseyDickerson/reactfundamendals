@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import NytResults from './NytResults';
-
 const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const key = 'DXeLGrY5jGzBoTcUaZgq4U5e5IRpAdgp';
 
@@ -18,13 +17,27 @@ const NytApp = () => {
 
         fetch(url)
         .then(res => res.json())
-        .then(data = setResults(data.response.docs))
+        .then(data => setResults(data.response.docs))
         .catch(err => console.log(err));
     };
 
     const handleSubmit = (event) => {
         fetchResults()
         event.preventDefault()
+    }
+
+    const changePageNumber = (event, direction) => {
+        event.preventDefault()
+        if (direction === 'down') {
+            if (pageNumber > 0) {
+                setPageNumber(pageNumber - 1);
+                fetchResults();
+            }
+        }
+        if (direction === 'up') {
+            setPageNumber(pageNumber + 1);
+            fetchResults();
+        }
     }
 
     return(
@@ -43,7 +56,7 @@ const NytApp = () => {
                     <button className="submit">Submit Search</button>
                 </form>
                 {
-                    this.StaticRange.results.length > 0 ? <NytResults resutls={results} /> : null
+                    results.length > 0 ? <NytResults results={results} changePage={changePageNumber} /> : null
                 }
             </div>
         </div>

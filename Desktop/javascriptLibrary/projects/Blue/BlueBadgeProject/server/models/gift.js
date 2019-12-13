@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+ module.exports = (sequelize, DataTypes) => {
     const Gift = sequelize.define('gift', {
         recipient: {
             type: DataTypes.STRING,
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         delivered: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         },
         owner: {
             type: DataTypes.INTEGER

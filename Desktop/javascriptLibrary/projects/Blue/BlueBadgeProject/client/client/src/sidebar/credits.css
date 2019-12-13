@@ -1,0 +1,207 @@
+#creditDiv {
+  /* border: 1px solid white; */
+  margin-bottom: 5%;
+  margin-left: 70px;
+  margin-top: 30px;
+  width: 85vw;
+  left: -50px;
+  height: 80%;
+  position: relative;
+}
+
+#credith1 {
+    font-family: var(--font-one);
+    color: var(--white);
+    margin-left: 340px;
+    /* border: 1px solid white; */
+    margin-top: 30px;
+    width: 120px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#h4Text {
+    /* border: 1px solid white; */
+    font-family: var(--font-one);
+    color: var(--white);
+    margin-left: 3%;
+    width: 45%;
+    text-align: center;
+    margin: auto;
+}
+
+#divCreditElf {
+  /* border: 1px solid white; */
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+}
+#creditElf {
+  height: 75px;
+  /* border: 1px solid white; */
+  /* margin-left: 180px; */
+  margin-top: 20px;
+  /* position: absolute; */
+}
+
+#creditElfText {
+    font-family: var(--font-one);
+    color: var(--white);
+    /* border: 1px solid white; */
+    margin-left: 100px;
+    margin-top: -50px;
+    font-size: 18px;
+    /* text-align: center; */
+    width: 280px;
+}
+
+#divCreditBubble {
+  /* border: 1px solid pink; */
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+}
+
+#creditBubble {
+  height: 75px;
+/* border: 1px solid white; */
+/* margin-left: 180px; */
+margin-top: 20px;
+}
+
+#creditBubbleText {
+    font-family: var(--font-one);
+    color: var(--white);
+    /* border: 1px solid pink; */
+    text-align: center;
+
+    margin-left: 100px;
+    margin-top: -50px;
+    font-size: 18px;
+    /* text-align: center; */
+    width: 280px;
+}
+
+#divCreditTree {
+  /* border: 1px solid purple; */
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+}
+#creditTree {
+    height: 75px;
+  /* border: 1px solid white; */
+  /* margin-left: 180px; */
+  margin-top: 20px;
+}
+
+#creditTreeText {
+  font-family: var(--font-one);
+    color: var(--white);
+    /* border: 1px solid pink; */
+    /* text-align: center; */
+
+    margin-left: 100px;
+    margin-top: -50px;
+    font-size: 18px;
+    /* text-align: center; */
+    width: 280px;
+}
+
+#divCreditAdd {
+  /* border: 1px solid lightseagreen; */
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+}
+
+#creditAdd {
+    height: 75px;
+    /* border: 1px solid white; */
+    /* margin-left: 180px; */
+    
+
+  /* margin-left: 180px; */
+  margin-top: 20px;
+}
+
+#creditAddText {
+  font-family: var(--font-one);
+    color: var(--white);
+    /* border: 1px solid pink; */
+    text-align: center;
+    font-size: 18px;
+    margin-left: 98px;
+    margin-top: -50px;
+    font-size: 18px;
+    /* text-align: center; */
+    width: 280px;
+}
+
+#divSnowstormCredit {
+  /* border: 1px solid white; */
+  width: 280px;
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+  /* margin-top: 60px; */
+  /* top: 80px; */
+  /* margin-left: 438px;
+  margin-top: 46px;  */
+  /* margin: auto; */
+  color: var(--white);
+}
+
+#creditSnowIcon {
+  height: 75px;
+  /* border: 1px solid white; */
+  /* margin-left: 180px; */
+  margin-top: 20px;
+}
+
+#creditSnowstormText {
+  /* border: 1px solid orange; */
+  width: 310px;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+  
+  margin-left: 98px;
+  margin-top: -50px;
+  
+  /* text-align: center; */
+  /* width: 280px; */
+}
+
+#divCreditSnowflakeIcon {
+  /* border: 1px solid lightseagreen; */
+  height: 14%;
+  width: 40%;
+  margin-left: 20px;
+  margin: auto;
+}
+
+#creditAddSnowFlake {
+  height: 75px;
+  /* border: 1px solid white; */
+  /* margin-left: 180px; */
+  margin-top: 20px;
+}
+
+#creditAddSnowflake {
+  font-family: var(--font-one);
+    color: var(--white);
+    /* border: 1px solid pink; */
+    text-align: center;
+    font-size: 18px;
+    margin-left: 98px;
+    margin-top: -50px;
+    font-size: 18px;
+    /* text-align: center; */
+    width: 280px;
+}

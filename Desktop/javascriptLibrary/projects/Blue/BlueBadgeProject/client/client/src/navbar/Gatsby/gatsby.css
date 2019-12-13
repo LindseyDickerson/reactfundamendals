@@ -1,0 +1,50 @@
+#treePic {
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15px;
+    /* padding-bottom: -20px; */
+}
+
+#closeButton {
+    background-color: var(--red);
+    margin: auto;
+    border: 3px dashed var(--white);
+    border-radius: 10px;
+}
+
+#treeModal {
+    border: 3px dashed var(--white);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.modal-content {
+    -webkit-border-radius: 15px;
+    border: 1px solid var(-white);
+}
+#treeModalHeader {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 15px 15px 0 0;
+}
+
+#modalHeaderText {
+    font-size: 24px;
+    margin-left: 100px;
+    /* border: 1px solid white; */
+    /* text-align: center; */
+}
+
+#treeModalBody {
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+}
+
+#treeModalFooter {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 0 0 15px 15px;
+}

@@ -13,20 +13,21 @@ router.post('/createuser', function (req, res) {
 
     let name = req.body.user.name;
     let email = req.body.user.email;
-    let passwordhash = req.body.user.passwordhash
+    let passwordhash = req.body.user.passwordhash;
 
     User.create({
         name: name,
         email: email,
-        passwordhash: bcrypt.hashSync(passwordhash, 13)
+        passwordhash: bcrypt.hashSync(process.env.JWT_SECRET, 13)
     }).then(
         function createSuccess(user){
             let token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: 60*60*24});
             res.json({
                 email: email,
                 name: name,
+                passwordhash: bcrypt.hashSync(process.env.JWT_SECRET, 13),
                 message: 'User Created',
-                sesionToken: token
+                sessionToken: token
             });
         },
         function createError(err) {
@@ -38,17 +39,17 @@ router.post('/createuser', function (req, res) {
 /***************************
  * Signin Endpoint
 ***************************/
-router.post('/signin', function(req, res) {
+router.post('/login', function(req, res) {
     User.findOne( {where: {email: req.body.user.email } } ).then(
         function(user) {
             if(user) {
-                bcrypt.compare(req.body.user.passwordhash, user.passwordhash, function(err, matches) {
+                bcrypt.compare(process.env.JWT_SECRET, user.passwordhash, function(err, matches) {
                     if(matches) {
                         let token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: 60*60*24});
-                        res.json({
+                        res.status(200).json({
                             user: user, 
                             message: "Now that's an authentication!",
-                            sesionToken: token
+                            sessionToken: token
                         });
                     } else {
                         res.status(502).send({error: "what a failure"});

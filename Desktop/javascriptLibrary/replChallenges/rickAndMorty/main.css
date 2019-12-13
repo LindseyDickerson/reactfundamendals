@@ -1,0 +1,17 @@
+#imageOne {
+    border-radius: 30px;
+    border: 2px blue solid;
+    display: block;
+    margin: auto;
+    width: 25vw;
+    height: 25vh;
+}
+
+#imageTwo {
+    border-radius: 30px;
+    border: 2px orange solid;
+    display: block;
+    margin: auto;
+    width: 25vw;
+    height: 25vh;
+}

@@ -1,0 +1,47 @@
+#editModal {
+    border: 3px dashed var(--white);
+    border-radius: 15px;
+}
+
+#modalheader {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 15px 15px 0 0;
+}
+
+#input {
+    background-color: var(--red);
+    font-family: var(--font-one);
+    color: var(--white);
+    border: 2px dashed var(--white);
+    border-radius: 15px;
+}
+
+#input:focus {
+    background-color: var(--red);
+}
+
+#editModalBody {
+    background-color: var(--green);
+    font-family: var(--font-one);
+    color: var(--white);
+    border-radius: 0 0 15px 15px;
+}
+
+#editModalButton {
+    background-color: var(--red);
+    border: 3px dashed var(--white);
+    margin-left: 10%;
+    border-radius: 15px;
+}
+
+#closeEditModal {
+    background-color: var(--red);
+    border: 3px dashed var(--white);
+    margin-left: 10%;
+    border-radius: 15px;
+}
+
+#editForm {
+    border-radius: 15px;
+}

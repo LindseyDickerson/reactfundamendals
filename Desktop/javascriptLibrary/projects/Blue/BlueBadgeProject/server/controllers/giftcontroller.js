@@ -1,8 +1,8 @@
 let router = require('express').Router();
 let sequelize = require('../db');
 let User = sequelize.import('../models/user');
-//let Gift = require('../db').import('../models/gift');
-let GiftModel = sequelize.import('../models/gift');
+let Gift = sequelize.import('../models/gift');
+let validateSession = require('../middleware/validate-session');
 
 /**********************************
  * GET ALL ITEMS FOR SPECIFIC USER
@@ -10,7 +10,7 @@ let GiftModel = sequelize.import('../models/gift');
 router.get('/all', function (req, res) {
     let userid = req.user.id;
 
-    GiftModel
+    Gift
         .findAll({
             where: { owner: userid }
         })
@@ -27,16 +27,18 @@ router.get('/all', function (req, res) {
 /********************************
  * Post Single Item for One User
 *********************************/
-router.post('/wrap', function (req, res) {
+router.post('/wrap', validateSession, (req, res) => {
     const giftRequest = {
-        recipient: req.body.user.recipient,
-        giftItem: req.body.user.giftItem,
-        cost: req.body.user.cost,
-        storagePlace: req.body.user.storagePlace,
-        purchaseAt: req.body.user.purchaseAt,
-        wrappedIn: req.body.user.wrappedIn
+        recipient: req.body.gift.recipient,
+        giftItem: req.body.gift.giftItem,
+        cost: req.body.gift.cost,
+        storagePlace: req.body.gift.storagePlace,
+        purchaseAt: req.body.gift.purchaseAt,
+        wrappedIn: req.body.gift.wrappedIn,
+        delivered: req.body.gift.delivered,
+        owner: req.user.id
     }
-    GiftModel.create(giftRequest)
+    Gift.create(giftRequest)
     .then(gift => res.status(200).json(gift))
     .catch(err => res.json(req.errors))
 });
@@ -44,11 +46,11 @@ router.post('/wrap', function (req, res) {
 /*************************************
  * GET single item for specific user
 **************************************/
-router.get('/:id', function(req, res) {
+router.get('/:id', validateSession, function(req, res) {
     let data = req.params.id;
     let userid = req.user.id;
 
-    GiftModel
+    Gift
         .findOne({
             where: { id: data, owner: userid }
         }).then(
@@ -64,11 +66,11 @@ router.get('/:id', function(req, res) {
 /**************************
  * Delete for single user
 ***************************/
-router.delete('/delete/:id', function(req, res) {
+router.delete('/delete/:id', validateSession, function(req, res) {
     let data = req.params.id;
     let userid = req.user.id;
 
-    GiftModel
+    Gift
         .destroy({
             where: { id: data, owner: userid }
         }).then(
@@ -82,28 +84,40 @@ router.delete('/delete/:id', function(req, res) {
 });
 
 /*******************************
+ * Get items by recipient STRETCH GOAL
+********************************/
+// router.get('/:recipient', validateSession, (req, res) => {
+//     Gift.findAll( {where: { recipient: req.params.recipient }})
+//     .then(gift => res.status(200).json(gift))
+//     .catch(err => res.status(500).json({error: err}))
+// })
+router.get('/all/:recipient', validateSession, function (req, res) {
+    let recipient = req.params.recipient;
+    let userid = req.user.id;
+
+    Gift.findAll({
+      where: { owner: userid,  recipient: recipient  }
+    })
+      .then(
+        function findAllSuccess(recipient) {
+          res.json(recipient);
+        },
+        function findAllError(err) {
+          res.send(500, err.message);
+        }
+      );
+  });
+
+
+
+
+/*******************************
  * Update item for single user
 *******************************/
-router.put('/update/:id', function (req, res) {
-    let data = req.params.id;
-    let giftData = req.body.giftData.item;
-
-    GiftModel
-        .update({
-            giftData: giftData
-        },
-        {where: {id: data}}
-        ).then(
-            function updateSuccess(updatedLog) {
-                res.json({
-                    giftData: giftdata
-                });
-            },
-            function updateError(err) {
-                res.send(500, err.message);
-            }
-        )
-});
-
+router.put('/:id', validateSession, (req, res) => {
+    Gift.update(req.body.gift, { where: {id: req.params.id} })
+    .then(gift => res.status(200).json(gift))
+    .catch(err => res.status(500).json({error: err}))
+})
 
 module.exports = router;

@@ -1,0 +1,78 @@
+.signupContainer {
+    /* border: 1px solid white; */
+    width: 80vw;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#signup {
+    /* border: 1px solid white; */
+    width: 107px;
+    /* margin-left: 105px; */
+    margin-top: 20px;
+    font-family: var(--font-one);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#inputs {
+    font-family: var(--font-one);
+    color: var(--white);
+    margin: auto;
+    
+    /* background-color: var(--green); */
+}
+
+#inputEntry {
+    font-family: var(--font-one);
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 15px;
+}
+
+#inputEntry:focus {
+    font-family: var(--font-one);
+    color: var(--white);
+    background-color: var(--red);
+    
+}
+
+#labelEmail {
+    /* border: 1px solid purple; */
+    width: 15%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}
+/* #emailLabel {
+    margin: auto;
+} */
+
+#nameLabel {
+    width: 15%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}
+
+#labelName {
+    margin: auto;
+    /* border: 1px solid yellow; */
+    width: 15%;
+    font-family: var(--font-one);
+}
+
+#labelPassword {
+    /* border: 1px solid red; */
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}    
+
+#signupButton {
+    background-color: var(--red);
+    border: 1px solid var(--white);
+    font-family: var(--font-one);
+    border-radius: 15px;
+}

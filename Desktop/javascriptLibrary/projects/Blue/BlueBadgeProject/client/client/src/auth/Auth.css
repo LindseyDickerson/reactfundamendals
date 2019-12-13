@@ -1,0 +1,17 @@
+#toggleLogin {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-red);
+    color: var(--white);
+    background-color: var(--red);
+    border: 1px solid white;
+    border-radius: 15px;
+    
+}
+
+#buttonDiv {
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

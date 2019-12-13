@@ -1,0 +1,220 @@
+#divCreate {
+    /* Div that houses the plus sign image */
+    /* background-color: var(--red); */
+    /* border: 1px solid var(--white); */
+    /* width: 150px;*/
+    /* margin: 10px; */
+    /* border-radius: 15px;
+    border: 1px solid purple;
+    margin-top: 50px; */ 
+    height: 150px;
+}
+
+#imageAddDiv {
+    width: 150px;
+}
+
+.modal-content {
+    border-radius: 15px;
+    border: 1px solid olivedrab;
+}
+#createCard {
+    width: 140px;
+    height: 140px;
+    margin: 10px; 
+    display: flex; 
+    background-color: var(--red);
+    border: 3px dashed white;
+    margin: 14px;
+    border-radius: 15px;
+    /* margin-top: 300px;
+    margin-left: 100px;*/
+} 
+
+
+#addImg {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20%; */
+    height: 110px;
+    width: 110px;
+    padding: 5px;
+    background-color: var(--red);
+    margin: auto;
+}
+
+
+#addModal {
+    border-radius: 15px;
+    /* border: 3px dashed var(--white); */
+}
+
+body {
+    font-family: var(--font-one);
+    font-size: medium;
+    border-radius: 15px;
+    background-color: var(--green);
+}
+
+#modalHeader {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 15 15 0 0;
+    /* border: 1px solid orange; */
+    border-top: 3px dashed var(--white);
+    border-left: 3px dashed var(--white);
+    border-right: 3px dashed var(--white);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* width: 135px; */
+    height: 55px;
+    /* margin-bottom: 5px; */
+}
+
+#addGiftText {
+    /* border: 1px solid black; */
+    width: 135px;
+    font-size: 32px;
+    display: flex;
+    /* margin-bottom: 20px; */
+    margin-left: 140px;
+
+}
+
+#modalBody {
+    background-color: var(--green);
+    border-left: 3px dashed var(--white);
+    border-right: 3px dashed var(--white);
+    border-bottom: 3px dashed var(--white);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* #addFormgroup {
+    border: 1px solid purple;
+    border-bottomius: 15px;
+} */
+
+#formBody {
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 0 0 15 15px;
+    /* border: 1px solid var(--white); */
+    
+
+}
+
+#recInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+#giftInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+#costInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+#storageInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+#buyInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+#wrapInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 2px dashed var(--white);
+}
+
+/* #delvInput {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    border: 3px dashed var(--white);
+} */
+
+#deliveredGroup {
+    /* border: 1px solid lightsalmon; */
+    /* width: 31%; */
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#theDropdown {
+    /* border: 1px solid orange; */
+    /* margin: auto; */
+}
+
+#dropdownwithCarat {
+    background-color: var(--red);
+    border: 3px dashed var(--white);
+    margin-left: 15%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 165px;
+    margin-top: -60px;
+    
+}
+
+#dropdownMenu {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15px;
+    /* border: 1px solid var(--white); */
+    border: 3px dashed var(--white);
+}
+
+
+
+#dropdownItem {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 15 15 0 0px;
+    font-size: 16px;
+    /* border: 1px solid var(--white); */
+    
+}
+
+#dropdownItem:hover {
+    background-color: var(--green);
+}
+
+#formSave {
+    background-color: var(--red);
+    color: var(--white);
+    border: 3px dashed var(--white);
+    border-radius: 15px;
+    margin-left: 190px;
+}
+
+/* #dropdown {
+    color: var(--green);
+    font-family: var(--font-one);
+    padding: 10px;
+} */
+
+/* #caret {
+    background-color: var(--green);
+} */

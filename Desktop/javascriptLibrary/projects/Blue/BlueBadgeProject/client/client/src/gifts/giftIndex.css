@@ -1,0 +1,23 @@
+#cards {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    /* flex-basis: auto; */
+    /* justify-content: flex-start, space-evenly; */
+    /*align-content: space-around;*/
+    align-items: flex-start, baseline; 
+    /* border: 1px solid white; */
+    background-color: transparent;
+    width: 100vw;
+    /* top: -2px; */
+    /* width: 170px; */
+    height: 100%;
+    left: 20px;
+    top: 5px; 
+    margin-bottom: 50px;
+    /* z-index: 2; */
+}
+
+/* #selector {
+    background-color: var(--red);
+} */

@@ -1,0 +1,52 @@
+#loginContainer {
+    /* border: 1px solid white; */
+    width:80vw;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* font-family: var(--font-two); */
+}
+
+#inputs {
+    font-family: var(--font-two);
+    color: var(--white);
+    margin: auto;
+}
+
+/* #buttonDiv {
+    border: 1px solid yellowgreen; 
+
+} */
+
+#loginText {
+    /* border: 1px solid blue; */
+    width: 25%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}
+
+#labelEmailLogin {
+    /* border: 1px solid orange; */
+    width: 15%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}
+
+#labelPasswordLogin {
+    /* border: 1px solid mediumvioletred; */
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-one);
+}
+
+#inputEntry:focus {
+    background-color: var(--red);
+}
+
+#loginButton {
+    background-color: var(--red);
+    font-family: var(--font-one);
+    border-radius: 15px;
+}

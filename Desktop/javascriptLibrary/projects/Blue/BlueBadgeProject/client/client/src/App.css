@@ -3,24 +3,76 @@ font-family: 'Mountains of Christmas', cursive; */
 
 
 .App {
-  text-align: center;
-}
+  background-color: #000524;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+  /* height: 200vh; */
+  width: 150vw;
+  /* background-repeat: repeat; */
+  /* background-position: center; */
+  background-size: cover;
+  z-index: -1;
+  /* overflow: hidden; */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #09d3ac;
+/* .sidebarDiv {
+  display: flex;
+  background-color: var(--green);
+  width: 10%;
+  border: 1px solid white;
+  font-family: var(--font-three);
+ 
+} */
+.sidebar {
+  display: flex;
+  /* flex-grow: 1; */
+  /* background-color: #53565A; */
+  margin-top: -100px;
+  width: 150px;
+  height: 100vh;
+  /* border: 1px solid white; */
+  background-color: var(--green);
+  font-family: var(--font-one);
+  /* height: 100vh; */
+  margin-top: -167px;
+  z-index: 0;
+  background-size: contain;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  
+  /* background-repeat:  */
+  
+}
+
+.sidebar-list-styling {
+  /* border: 1px solid yellowgreen; */
+  height: 100px;
+  z-index: 1
+}
+
+.sidebar-list {
+  /* color: var(--white)!important; */
+  /* border: 1px solid white; */
+  /* margin-top: 10px; */
+  height: 100px;
+  width: 125px;
+  z-index: 2;
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 22px;
+  
+}
+
+a { 
+  color: var(--white); 
+}
+
+.sidebar-Route {
+  z-index: 0;
+  width: 100vw;
+  
 }

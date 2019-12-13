@@ -1,21 +1,7 @@
 import React from 'react';
 
 const NytResults = (props) => {
-
-    changePageNumber = (event, direction) => {
-        event.preventDefault()
-        if (direction === 'down') {
-            if (pageNumber > 0) {
-                setPageNumber(pageNumber -1);
-                fetchResults();
-            }
-        }
-        if (direction === 'up') {
-            setPageNumber(pageNumber + 1);
-            fetchResults();
-        }
-    }
-
+    console.log(props);
     return (
         <div>
             {props.results.map(result => {
